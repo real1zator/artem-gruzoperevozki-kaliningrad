@@ -84,9 +84,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* Hamburger — hidden on all screens */
 .hbg{display:none!important}
 /* Mobile nav strip */
-.mobn{display:flex;align-items:center;justify-content:space-around;width:100%;padding:.4rem .25rem;gap:0}
+.mobn{display:flex;align-items:center;width:100%;padding:.35rem .3rem;gap:0;overflow:hidden}
 @media(min-width:768px){.mobn{display:none}}
-.mobn button{flex:1 1 0;background:none;border:none;border-right:1px solid rgba(255,255,255,.15);cursor:pointer;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9);padding:.4rem .1rem;white-space:nowrap;-webkit-tap-highlight-color:transparent;text-align:center}
+.mobn-logo{flex:0 0 auto;width:1.45rem;height:1.45rem;border-radius:50%;border:1.5px solid #FFD700;object-fit:cover;margin-right:.25rem}
+.mobn button{flex:1 1 0;min-width:0;background:none;border:none;border-right:1px solid rgba(255,255,255,.15);cursor:pointer;font-family:'Inter',sans-serif;font-size:clamp(.54rem,2.2vw,.68rem);font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9);padding:.4rem .05rem;white-space:nowrap;overflow:hidden;-webkit-tap-highlight-color:transparent;text-align:center}
 .mobn button:last-child{border-right:none;color:#FFD700}
 .mobn button:active{opacity:.7}
 .hl{display:block;width:19px;height:2px;background:#fff;border-radius:1px;transition:all .3s;transform-origin:center}
@@ -336,7 +337,6 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
 <div id="tb">
   <div class="c">
     <div style="display:flex;align-items:center;gap:.6rem">
-      <img src="https://customer-assets.emergentagent.com/job_8ad63734-8155-43ec-a69a-c0a59db28263/artifacts/e650gfs5_1.rjb31ba6FN_BcoDZp9vCRiZ2BNln9gTdS1QA3UFiAA.webp" style="width:1.6rem;height:1.6rem;border-radius:50%;border:1.5px solid #FFD700;object-fit:cover;flex-shrink:0" alt="">
       <a href="https://www.avito.ru/kaliningrad/predlozheniya_uslug/gruzoperevozki_gruzchiki_kvartirnye_pereezdy_2449768645" target="_blank" rel="noopener noreferrer" class="avito">
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         Мы на <span class="ay">Авито</span>
@@ -372,11 +372,12 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
   </div>
   <!-- Mobile nav strip -->
   <div class="mobn">
+    <img src="https://customer-assets.emergentagent.com/job_8ad63734-8155-43ec-a69a-c0a59db28263/artifacts/e650gfs5_1.rjb31ba6FN_BcoDZp9vCRiZ2BNln9gTdS1QA3UFiAA.webp" class="mobn-logo" alt="">
     <button onclick="goTo('#services')">Услуги</button>
     <button onclick="goTo('#pricing')">Цены</button>
     <button onclick="goTo('#gallery')">Галерея</button>
     <button onclick="goTo('#contacts')">Контакты</button>
-    <button onclick="openModal()" style="background:rgba(255,215,0,.3);border-color:#FFD700;color:#FFD700">Заявка</button>
+    <button onclick="openModal()" style="color:#FFD700">Заявка</button>
   </div>
   <div id="mm"></div>
 </nav>
