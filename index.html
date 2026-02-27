@@ -60,10 +60,11 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .tbp:hover{color:var(--y)}
 
 /* ===== NAVBAR ===== */
-#nb{position:sticky;top:0;z-index:100;background:transparent;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:background .3s,box-shadow .3s}
-#nb.sc{background:rgba(10,10,10,.55)!important;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+#nb{position:sticky;top:0;z-index:100;transition:background .3s,box-shadow .3s;border-bottom:1px solid transparent}
+@media(min-width:768px){#nb{background:rgba(10,10,10,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}}
+@media(min-width:768px){#nb.sc{background:rgba(10,10,10,.97)!important;box-shadow:0 2px 20px rgba(0,0,0,.5)}}
+@media(max-width:767px){#nb{background:rgba(0,0,0,.45)}}
 @media(max-width:767px){.nbi{display:none!important}}
-@media(max-width:767px){#nb,#nb.sc{background:transparent!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:none!important}}
 .nbi{max-width:1280px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;height:3.75rem}
 @media(min-width:768px){.nbi{padding:0 2rem;height:4rem}}
 .nlogo{display:flex;align-items:center;gap:.65rem;background:none;border:none;cursor:pointer}
@@ -83,11 +84,11 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* Hamburger — hidden on all screens */
 .hbg{display:none!important}
 /* Mobile nav strip */
-.mobn{display:flex;align-items:center;overflow-x:auto;gap:.3rem;padding:.5rem .5rem;border-top:none;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+.mobn{display:flex;align-items:center;overflow-x:auto;gap:.3rem;padding:.4rem .5rem;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
 .mobn::-webkit-scrollbar{display:none}
 @media(min-width:768px){.mobn{display:none}}
-.mobn button{flex:0 0 auto;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);cursor:pointer;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#fff;padding:.38rem .9rem;border-radius:999px;white-space:nowrap;-webkit-tap-highlight-color:transparent}
-.mobn button:active{background:rgba(255,215,0,.3);border-color:var(--y)}
+.mobn button{flex:0 0 auto;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);cursor:pointer;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8);padding:.4rem .95rem;border-radius:999px;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.mobn button:last-of-type{margin-right:.5rem}
 .hl{display:block;width:19px;height:2px;background:#fff;border-radius:1px;transition:all .3s;transform-origin:center}
 .hbg.op .hl:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hbg.op .hl:nth-child(2){opacity:0;transform:scaleX(0)}
@@ -334,10 +335,13 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
 <!-- TOP BAR -->
 <div id="tb">
   <div class="c">
-    <a href="https://www.avito.ru/kaliningrad/predlozheniya_uslug/gruzoperevozki_gruzchiki_kvartirnye_pereezdy_2449768645" target="_blank" rel="noopener noreferrer" class="avito">
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      Мы на <span class="ay">Авито</span>
-    </a>
+    <div style="display:flex;align-items:center;gap:.6rem">
+      <img src="https://customer-assets.emergentagent.com/job_8ad63734-8155-43ec-a69a-c0a59db28263/artifacts/e650gfs5_1.rjb31ba6FN_BcoDZp9vCRiZ2BNln9gTdS1QA3UFiAA.webp" style="width:1.6rem;height:1.6rem;border-radius:50%;border:1.5px solid #FFD700;object-fit:cover;flex-shrink:0" alt="">
+      <a href="https://www.avito.ru/kaliningrad/predlozheniya_uslug/gruzoperevozki_gruzchiki_kvartirnye_pereezdy_2449768645" target="_blank" rel="noopener noreferrer" class="avito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Мы на <span class="ay">Авито</span>
+      </a>
+    </div>
     <a href="tel:+79622600548" class="tbp">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.23a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.48h3a2 2 0 0 1 2 1.72c.21.63.45 1.24.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.81.34 1.64.54 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       +7 (962) 260-05-48
@@ -368,15 +372,11 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
   </div>
   <!-- Mobile nav strip -->
   <div class="mobn">
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="background:none;border:none;padding:.25rem .3rem;display:flex;align-items:center">
-      <img src="https://customer-assets.emergentagent.com/job_8ad63734-8155-43ec-a69a-c0a59db28263/artifacts/e650gfs5_1.rjb31ba6FN_BcoDZp9vCRiZ2BNln9gTdS1QA3UFiAA.webp" style="width:2rem;height:2rem;border-radius:50%;border:2px solid #FFD700;object-fit:cover;flex-shrink:0" alt="">
-    </button>
     <button onclick="scrollTo('#services')">Услуги</button>
     <button onclick="scrollTo('#pricing')">Цены</button>
     <button onclick="scrollTo('#gallery')">Галерея</button>
     <button onclick="scrollTo('#contacts')">Контакты</button>
-    <button onclick="openModal()" style="background:rgba(255,215,0,.25);border-color:#FFD700;color:#FFD700;margin-right:.5rem">Заявка</button>
-    <span aria-hidden="true" style="min-width:1rem;flex:0 0 auto"></span>
+    <button onclick="openModal()" style="background:rgba(255,215,0,.3);border-color:#FFD700;color:#FFD700">Заявка</button>
   </div>
   <div id="mm"></div>
 </nav>
