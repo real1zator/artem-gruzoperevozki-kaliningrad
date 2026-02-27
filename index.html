@@ -63,6 +63,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 #nb{position:sticky;top:0;z-index:100;background:transparent;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:background .3s,box-shadow .3s}
 #nb.sc{background:rgba(10,10,10,.55)!important;box-shadow:0 2px 20px rgba(0,0,0,.3)}
 @media(max-width:767px){.nbi{display:none!important}}
+@media(max-width:767px){#nb,#nb.sc{background:transparent!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:none!important}}
 .nbi{max-width:1280px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;height:3.75rem}
 @media(min-width:768px){.nbi{padding:0 2rem;height:4rem}}
 .nlogo{display:flex;align-items:center;gap:.65rem;background:none;border:none;cursor:pointer}
@@ -375,6 +376,7 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
     <button onclick="scrollTo('#gallery')">Галерея</button>
     <button onclick="scrollTo('#contacts')">Контакты</button>
     <button onclick="openModal()" style="background:rgba(255,215,0,.25);border-color:#FFD700;color:#FFD700;margin-right:.5rem">Заявка</button>
+    <span aria-hidden="true" style="min-width:1rem;flex:0 0 auto"></span>
   </div>
   <div id="mm"></div>
 </nav>
