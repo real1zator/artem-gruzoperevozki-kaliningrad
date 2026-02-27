@@ -721,9 +721,11 @@ function toggleMenu() {
 function scrollTo(id) {
   const el = document.querySelector(id);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  // close mobile menu if open
-  document.getElementById('hbtn').classList.remove('op');
-  document.getElementById('mm').classList.remove('op');
+  // close mobile menu if open (null-safe)
+  const hbtn = document.getElementById('hbtn');
+  const mm = document.getElementById('mm');
+  if (hbtn) hbtn.classList.remove('op');
+  if (mm) mm.classList.remove('op');
 }
 
 // ── SCROLL REVEAL ──
