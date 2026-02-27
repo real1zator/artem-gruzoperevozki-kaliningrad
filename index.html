@@ -84,11 +84,11 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* Hamburger — hidden on all screens */
 .hbg{display:none!important}
 /* Mobile nav strip */
-.mobn{display:flex;align-items:center;overflow-x:auto;gap:.3rem;padding:.4rem .5rem;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
-.mobn::-webkit-scrollbar{display:none}
+.mobn{display:flex;align-items:center;justify-content:space-around;width:100%;padding:.4rem .25rem;gap:0}
 @media(min-width:768px){.mobn{display:none}}
-.mobn button{flex:0 0 auto;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);cursor:pointer;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8);padding:.4rem .95rem;border-radius:999px;white-space:nowrap;-webkit-tap-highlight-color:transparent}
-.mobn button:last-of-type{margin-right:.5rem}
+.mobn button{flex:1 1 0;background:none;border:none;border-right:1px solid rgba(255,255,255,.15);cursor:pointer;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9);padding:.4rem .1rem;white-space:nowrap;-webkit-tap-highlight-color:transparent;text-align:center}
+.mobn button:last-child{border-right:none;color:#FFD700}
+.mobn button:active{opacity:.7}
 .hl{display:block;width:19px;height:2px;background:#fff;border-radius:1px;transition:all .3s;transform-origin:center}
 .hbg.op .hl:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hbg.op .hl:nth-child(2){opacity:0;transform:scaleX(0)}
