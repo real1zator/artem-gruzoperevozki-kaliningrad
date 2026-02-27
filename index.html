@@ -83,8 +83,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* Mobile nav strip */
 .mobn{display:flex;align-items:center;overflow-x:auto;gap:.25rem;padding:.45rem 0 .45rem .9rem;border-top:1px solid rgba(255,255,255,.07);scrollbar-width:none;-ms-overflow-style:none}
 .mobn::-webkit-scrollbar{display:none}
-.mobn::after{content:'';display:block;min-width:.9rem;flex-shrink:0}
 @media(min-width:768px){.mobn{display:none}}
+#nb.sc .mobn{display:none!important}
 .mobn button{flex-shrink:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);cursor:pointer;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);padding:.35rem .85rem;border-radius:999px;transition:color .2s,background .2s;white-space:nowrap}
 .mobn button:hover,.mobn button:active{color:#fff;background:rgba(255,215,0,.25);border-color:var(--y)}
 .hl{display:block;width:19px;height:2px;background:#fff;border-radius:1px;transition:all .3s;transform-origin:center}
@@ -372,6 +372,7 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
     <button onclick="scrollTo('#gallery')">Галерея</button>
     <button onclick="scrollTo('#contacts')">Контакты</button>
     <button onclick="openModal()" style="background:rgba(255,215,0,.2);border-color:var(--y);color:#FFD700">Заявка</button>
+    <span style="min-width:.9rem;flex-shrink:0;display:block"></span>
   </div>
   <div id="mm"></div>
 </nav>
