@@ -357,10 +357,10 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
       <span>Артём</span>
     </button>
     <div class="nlinks">
-      <button class="nl" onclick="scrollTo('#services')">Услуги</button>
-      <button class="nl" onclick="scrollTo('#pricing')">Цены</button>
-      <button class="nl" onclick="scrollTo('#gallery')">Галерея</button>
-      <button class="nl" onclick="scrollTo('#contacts')">Контакты</button>
+      <button class="nl" onclick="goTo('#services')">Услуги</button>
+      <button class="nl" onclick="goTo('#pricing')">Цены</button>
+      <button class="nl" onclick="goTo('#gallery')">Галерея</button>
+      <button class="nl" onclick="goTo('#contacts')">Контакты</button>
     </div>
     <div class="ncta">
       <a href="tel:+79622600548" class="nph">
@@ -372,10 +372,10 @@ footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:2.5
   </div>
   <!-- Mobile nav strip -->
   <div class="mobn">
-    <button onclick="scrollTo('#services')">Услуги</button>
-    <button onclick="scrollTo('#pricing')">Цены</button>
-    <button onclick="scrollTo('#gallery')">Галерея</button>
-    <button onclick="scrollTo('#contacts')">Контакты</button>
+    <button onclick="goTo('#services')">Услуги</button>
+    <button onclick="goTo('#pricing')">Цены</button>
+    <button onclick="goTo('#gallery')">Галерея</button>
+    <button onclick="goTo('#contacts')">Контакты</button>
     <button onclick="openModal()" style="background:rgba(255,215,0,.3);border-color:#FFD700;color:#FFD700">Заявка</button>
   </div>
   <div id="mm"></div>
@@ -718,7 +718,7 @@ function toggleMenu() {
 }
 
 // ── SMOOTH SCROLL ──
-function scrollTo(id) {
+function goTo(id) {
   const el = document.querySelector(id);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   // close mobile menu if open (null-safe)
