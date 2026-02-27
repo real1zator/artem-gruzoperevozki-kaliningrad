@@ -62,6 +62,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* ===== NAVBAR ===== */
 #nb{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:background .3s,box-shadow .3s,border-color .3s}
 #nb.sc{background:rgba(10,10,10,.6)!important;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 2px 24px rgba(0,0,0,.35);border-bottom-color:rgba(255,255,255,.06)}
+@media(max-width:767px){#nb.sc .nbi{display:none}}
 .nbi{max-width:1280px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;height:3.75rem}
 @media(min-width:768px){.nbi{padding:0 2rem;height:4rem}}
 .nlogo{display:flex;align-items:center;gap:.65rem;background:none;border:none;cursor:pointer}
@@ -81,10 +82,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* Hamburger — hidden on all screens */
 .hbg{display:none!important}
 /* Mobile nav strip */
-.mobn{display:flex;align-items:center;overflow-x:auto;gap:.25rem;padding:.45rem 0 .45rem .9rem;border-top:1px solid rgba(255,255,255,.07);scrollbar-width:none;-ms-overflow-style:none}
+.mobn{display:flex;align-items:center;overflow-x:scroll;gap:.25rem;padding:.45rem .9rem .45rem .9rem;border-top:1px solid rgba(255,255,255,.07);scrollbar-width:none;-ms-overflow-style:none}
 .mobn::-webkit-scrollbar{display:none}
 @media(min-width:768px){.mobn{display:none}}
-#nb.sc .mobn{display:none!important}
+#nb.sc .mobn{max-height:3rem;overflow-x:scroll;border-top:none}
 .mobn button{flex-shrink:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);cursor:pointer;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);padding:.35rem .85rem;border-radius:999px;transition:color .2s,background .2s;white-space:nowrap}
 .mobn button:hover,.mobn button:active{color:#fff;background:rgba(255,215,0,.25);border-color:var(--y)}
 .hl{display:block;width:19px;height:2px;background:#fff;border-radius:1px;transition:all .3s;transform-origin:center}
