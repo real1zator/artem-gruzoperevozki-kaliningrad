@@ -27,14 +27,19 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
 @keyframes rainbow-shift{0%,100%{background-position:0% center}50%{background-position:100% center}}
 @keyframes green-border-pulse{0%{border-color:#10b981;box-shadow:0 0 18px rgba(16,185,129,.35),0 0 40px rgba(16,185,129,.1)}25%{border-color:#34d399;box-shadow:0 0 28px rgba(52,211,153,.5),0 0 60px rgba(52,211,153,.15)}50%{border-color:#059669;box-shadow:0 0 20px rgba(5,150,105,.4),0 0 50px rgba(5,150,105,.12)}75%{border-color:#6ee7b7;box-shadow:0 0 32px rgba(110,231,183,.55),0 0 70px rgba(110,231,183,.18)}100%{border-color:#10b981;box-shadow:0 0 18px rgba(16,185,129,.35),0 0 40px rgba(16,185,129,.1)}}
 .gradient-text-rainbow{background:linear-gradient(90deg,#ff6b6b,#ffb347,#ffe066,#6bffb8,#6bcfff,#c084fc,#ff6b6b);background-size:300% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:rainbow-shift 4s linear infinite;display:inline-block}
-@media(max-width:768px){.hero-inner{flex-direction:column;gap:1.5rem}.hero-text-col{order:1;width:100%;flex:none}
-.hero-photo-col{order:2;width:100%;max-width:420px;margin:0 auto;flex:none}.hero-photo-img{max-width:100%}}
+@media(max-width:768px){
+.hero-inner{flex-direction:column;gap:.75rem}
+.hero-text-col{order:1;width:100%;flex:none}
+.hero-photo-col{order:2;width:100%;max-width:100%;margin:0;flex:none;display:flex;align-items:center;justify-content:center}
+.hero-photo-img{width:100%;height:auto;max-height:260px;object-fit:contain;object-position:bottom center}
+}
 .hero-advantages{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;margin-bottom:1rem}
 .hero-adv-item{display:flex;align-items:center;gap:.6rem;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:.65rem .75rem}
 .hero-adv-icon{font-size:1.4rem;line-height:1;flex-shrink:0}
 .hero-adv-title{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:#fff;line-height:1.2}
 .hero-adv-sub{font-size:.72rem;color:#6ee7b7;margin-top:.15rem;line-height:1.2}
 @media(min-width:769px){.hero-advantages{display:none}}
+@media(max-width:640px){.hero-advantages{margin-top:.5rem;margin-bottom:.5rem;gap:.4rem}.hero-adv-item{padding:.4rem .5rem}.hero-adv-title{font-size:.8rem}.hero-adv-sub{font-size:.68rem}}
 @keyframes float-up{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 .avito-badge{display:inline-flex;align-items:center;gap:.625rem;background:rgba(88,28,135,.18);border:1px solid rgba(192,132,252,.35);border-radius:9999px;padding:.5rem 1.25rem;backdrop-filter:blur(10px);margin-bottom:1.75rem}
 .stars{display:flex;gap:2px}
@@ -55,18 +60,18 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
 .scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:scroll-down 1.6s ease-in-out infinite}
 @keyframes scroll-down{0%,100%{transform:translateX(-50%) translateY(0);opacity:1}50%{transform:translateX(-50%) translateY(8px);opacity:.4}}
 @media(max-width:640px){
-.hero{height:100svh;height:100vh;padding:56px .75rem .75rem}
-.hero-content{padding:1rem .875rem .875rem;display:flex;flex-direction:column;overflow:hidden}
-.hero-inner{flex-direction:column;gap:0;flex:1;min-height:0;overflow:hidden}
+.hero{height:auto!important;min-height:100vh;padding:56px .75rem .75rem}
+.hero-content{padding:1rem .875rem 1rem;flex:1;display:flex;flex-direction:column;justify-content:flex-start}
+.hero-inner{flex-direction:column!important;gap:.5rem;align-items:flex-start}
 .hero-text-col{order:1;width:100%;flex:none}
-.hero-photo-col{order:2;width:100%;flex:1;min-height:0;display:flex;align-items:flex-end;overflow:hidden}
-.hero-photo-img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:bottom center}
+.hero-photo-col{order:2;width:100%;flex:none;display:flex;align-items:center;justify-content:center;margin:0}
+.hero-photo-img{width:100%;height:auto;max-height:240px;object-fit:contain;object-position:bottom center}
 .btns{display:none!important}
 .trust{display:none!important}
 .hero-desc{display:none!important}
 .tags{gap:.4rem;margin-bottom:.5rem}
-.avito-badge{margin-bottom:.75rem}
-.hero-title-row{font-size:clamp(1.6rem,7.5vw,2.4rem)!important}
+.avito-badge{margin-bottom:.5rem;padding:.375rem .875rem}
+.hero-title-row{font-size:clamp(1.6rem,7.5vw,2.2rem)!important}
 }
 </style>
 <style>section#hero{display:none!important}</style>
