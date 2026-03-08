@@ -49,7 +49,7 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
 .trust-icon{width:15px;height:15px;color:#a855f7;flex-shrink:0}
 .scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:scroll-down 1.6s ease-in-out infinite}
 @keyframes scroll-down{0%,100%{transform:translateX(-50%) translateY(0);opacity:1}50%{transform:translateX(-50%) translateY(8px);opacity:.4}}
-@media(max-width:640px){.hero{height:auto;min-height:100vh}.hero-content{padding:1.5rem 1.25rem 1.5rem}.trust{gap:.75rem}.hero-inner{flex-direction:column;gap:1rem}}
+@media(max-width:640px){.hero{height:auto;min-height:100vh}.hero-content{padding:1.25rem 1rem 1rem;display:flex;flex-direction:column}.hero-inner{flex-direction:column;gap:0;flex:1;min-height:0}.hero-text-col{order:1;width:100%;flex:none}.hero-photo-col{order:2;width:100%;flex:1;min-height:180px;display:flex;align-items:flex-end}.hero-photo-img{width:100%;height:auto;max-height:320px;object-fit:contain;object-position:bottom}.btns{display:none!important}.trust{display:none!important}.tags{gap:.5rem;margin-bottom:.75rem}.hero-title-row{font-size:clamp(1.5rem,7.5vw,2.4rem)!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}}
 </style>
 <style>section#hero{display:none!important}</style>
 <style>section#hero{display:none!important}section#fleet{display:none!important}a[href="#fleet"]{display:none!important}</style>
@@ -88,7 +88,7 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
     <!-- Заголовок на всю ширину -->
     <div class="font-playfair" style="margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid rgba(16,185,129,.3)">
       <div style="font-weight:900;line-height:1;letter-spacing:.01em;text-align:center">
-        <div style="font-size:clamp(2.5rem,6vw,5rem);line-height:1"><span class="gradient-text-rainbow">ГРУЗОПЕРЕВОЗКИ</span></div>
+        <div class="hero-title-row" style="font-size:clamp(2.5rem,6vw,5rem);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><span class="gradient-text-rainbow">ГРУЗОПЕРЕВОЗКИ</span></div>
       </div>
     </div>
     <div class="hero-inner">
@@ -132,9 +132,20 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
       </div>
     </div>
   </div>
-
-  
 </section>
+
+<!-- Плавающие кнопки -->
+<div style="position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:9999">
+  <a href="tel:+7XXXXXXXXXX" title="Позвонить" style="width:48px;height:48px;border-radius:50%;background:#fbbf24;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(251,191,36,.5);text-decoration:none;transition:transform .2s" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  </a>
+  <a href="#contact" title="Заявка" style="width:48px;height:48px;border-radius:50%;background:#10b981;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(16,185,129,.5);text-decoration:none;transition:transform .2s" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </a>
+  <a href="https://t.me/" target="_blank" title="Telegram" style="width:48px;height:48px;border-radius:50%;background:#229ED9;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(34,158,217,.5);text-decoration:none;transition:transform .2s" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-2.01 9.47c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.48 14.013l-2.95-.924c-.64-.203-.654-.64.136-.948l11.527-4.443c.537-.194 1.006.131.837.948l-.468-.4z"/></svg>
+  </a>
+</div>
 <script>
 (function(){if(window.innerWidth<768)return;var bg=document.querySelector('.hero-bg');if(!bg)return;window.addEventListener('scroll',function(){var y=Math.max(0,window.scrollY*0.35);bg.style.transform='translateY('+y+'px)';},{passive:true});})();
 </script>
