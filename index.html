@@ -29,7 +29,12 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
 .gradient-text-rainbow{background:linear-gradient(90deg,#ff6b6b,#ffb347,#ffe066,#6bffb8,#6bcfff,#c084fc,#ff6b6b);background-size:300% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:rainbow-shift 4s linear infinite;display:inline-block}
 @media(max-width:768px){.hero-inner{flex-direction:column;gap:1.5rem}.hero-text-col{order:1;width:100%;flex:none}
 .hero-photo-col{order:2;width:100%;max-width:420px;margin:0 auto;flex:none}.hero-photo-img{max-width:100%}}
-.blob{position:absolute;border-radius:50%;pointer-events:none;filter:blur(60px);animation:float-up 7s ease-in-out infinite}
+.hero-advantages{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;margin-bottom:1rem}
+.hero-adv-item{display:flex;align-items:center;gap:.6rem;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:.65rem .75rem}
+.hero-adv-icon{font-size:1.4rem;line-height:1;flex-shrink:0}
+.hero-adv-title{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:#fff;line-height:1.2}
+.hero-adv-sub{font-size:.72rem;color:#6ee7b7;margin-top:.15rem;line-height:1.2}
+@media(min-width:769px){.hero-advantages{display:none}}
 @keyframes float-up{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 .avito-badge{display:inline-flex;align-items:center;gap:.625rem;background:rgba(88,28,135,.18);border:1px solid rgba(192,132,252,.35);border-radius:9999px;padding:.5rem 1.25rem;backdrop-filter:blur(10px);margin-bottom:1.75rem}
 .stars{display:flex;gap:2px}
@@ -126,6 +131,26 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
         <div class="tag"><span style="color:#c084fc;font-weight:700;font-size:1.125rem">Город</span><span style="color:#71717a;font-size:.875rem">+ область</span></div>
         <div class="tag"><span style="color:#e879f9;font-weight:700;font-size:1.125rem">70₽</span><span style="color:#71717a;font-size:.875rem">/км</span></div>
         <div class="tag"><span style="color:#d4d4d8;font-size:.875rem;font-weight:500">Без пробок</span></div>
+      </div>
+
+      <!-- Преимущества -->
+      <div class="hero-advantages">
+        <div class="hero-adv-item">
+          <span class="hero-adv-icon">⚡</span>
+          <div><div class="hero-adv-title">Быстро</div><div class="hero-adv-sub">Подача за 30 мин</div></div>
+        </div>
+        <div class="hero-adv-item">
+          <span class="hero-adv-icon">💰</span>
+          <div><div class="hero-adv-title">Честная цена</div><div class="hero-adv-sub">Без скрытых доплат</div></div>
+        </div>
+        <div class="hero-adv-item">
+          <span class="hero-adv-icon">🛡️</span>
+          <div><div class="hero-adv-title">Надёжно</div><div class="hero-adv-sub">5 лет на рынке</div></div>
+        </div>
+        <div class="hero-adv-item">
+          <span class="hero-adv-icon">📦</span>
+          <div><div class="hero-adv-title">Грузчики</div><div class="hero-adv-sub">В комплекте</div></div>
+        </div>
       </div>
 
       <div class="btns">
