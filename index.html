@@ -49,7 +49,20 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
 .trust-icon{width:15px;height:15px;color:#a855f7;flex-shrink:0}
 .scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:scroll-down 1.6s ease-in-out infinite}
 @keyframes scroll-down{0%,100%{transform:translateX(-50%) translateY(0);opacity:1}50%{transform:translateX(-50%) translateY(8px);opacity:.4}}
-@media(max-width:640px){.hero{height:auto;min-height:100vh}.hero-content{padding:1.25rem 1rem 1rem;display:flex;flex-direction:column}.hero-inner{flex-direction:column;gap:0;flex:1;min-height:0}.hero-text-col{order:1;width:100%;flex:none}.hero-photo-col{order:2;width:100%;flex:1;min-height:180px;display:flex;align-items:flex-end}.hero-photo-img{width:100%;height:auto;max-height:320px;object-fit:contain;object-position:bottom}.btns{display:none!important}.trust{display:none!important}.tags{gap:.5rem;margin-bottom:.75rem}.hero-title-row{font-size:clamp(1.5rem,7.5vw,2.4rem)!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}}
+@media(max-width:640px){
+.hero{height:100svh;height:100vh;padding:56px .75rem .75rem}
+.hero-content{padding:1rem .875rem .875rem;display:flex;flex-direction:column;overflow:hidden}
+.hero-inner{flex-direction:column;gap:0;flex:1;min-height:0;overflow:hidden}
+.hero-text-col{order:1;width:100%;flex:none}
+.hero-photo-col{order:2;width:100%;flex:1;min-height:0;display:flex;align-items:flex-end;overflow:hidden}
+.hero-photo-img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:bottom center}
+.btns{display:none!important}
+.trust{display:none!important}
+.hero-desc{display:none!important}
+.tags{gap:.4rem;margin-bottom:.5rem}
+.avito-badge{margin-bottom:.75rem}
+.hero-title-row{font-size:clamp(1.6rem,7.5vw,2.4rem)!important}
+}
 </style>
 <style>section#hero{display:none!important}</style>
 <style>section#hero{display:none!important}section#fleet{display:none!important}a[href="#fleet"]{display:none!important}</style>
@@ -105,7 +118,7 @@ body{background:#000;color:#fafafa;font-family:'Manrope',sans-serif;-webkit-font
         <div style="font-size:clamp(1.1rem,2.5vw,1.85rem);font-weight:700;line-height:1.2"><span class="gradient-text-rainbow" style="animation-delay:-.5s">по калининградской области</span></div>
       </div>
 
-      <p style="color:#d4d4d8;font-size:1.125rem;max-width:520px;line-height:1.65;margin-bottom:1.5rem">
+      <p class="hero-desc" style="color:#d4d4d8;font-size:1.125rem;max-width:520px;line-height:1.65;margin-bottom:1.5rem">
         Охватываем <span style="color:#fbbf24;font-weight:600">весь город и область</span>. Быстро, надёжно, по фиксированной цене.
       </p>
 
